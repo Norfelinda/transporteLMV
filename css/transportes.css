@@ -1,0 +1,181 @@
+/*font-family: 'Open Sans', sans-serif;*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+header{
+    background-color: #2e64a1;
+    padding: 16px 0 ;/*eye y.... eye x*/
+}
+header h1{
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 40px;
+    display: inline-block;
+    position: relative;/*con la relativa se mueve de aqui sube un poco con bottom el texto*/
+    bottom: 35px;
+    margin-left: 10px;
+    /*margin-left: 50px;*/ /*esto se puede husar*/
+}
+nav{
+    background-color: #6da9ed;
+    margin-bottom: 20px;/*esto es para separar la imagen del navegador*/
+
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+nav ul li{/*es el elemento padre , elemento flexible(tiene asignado display-flex)
+    especifica el factor de crecimiento*/
+    flex-grow: 1;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;/*con pading es necesario un display: block*/
+    text-align: center;
+    /* si no se usa estos dos:display: block;text-align: center;*/
+    display: flex;/*el display va con justify*/
+    justify-content: center;
+}
+nav ul li a:hover{
+    background-color: rgba(15, 8, 8, 0.3);/*rgba es para sacar opacidad*/
+
+}
+nav ul li a.activo{
+    background-color: #4c76a5;
+
+}
+footer{
+    background-color: #ddd;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+.holder{
+    width: 960px;
+    margin: 0 auto;
+
+
+}
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+}
+.columnas{
+    display: flex;
+    /*gap: 20px;*/
+}
+
+.bienvenidos{
+    /*background-color: yellow;*/
+    /*padding-right: 20px;*/
+    width: 75%;
+}
+.testimonios{
+    /*background-color: orange;*/
+    width: 25%;
+}
+.testimonio{
+    background-color: #ddd;
+    padding: 16px;
+}
+.testimonio .cita{
+    font-weight: bold;
+    font-size: 20px;
+    /*background-color: yellow;*/
+    font-style: italic;
+    display: block;/*como in .html el span trabaja en lilia ahora lo ponemos en bloque*/
+    /*display: flex;*/
+
+}
+.testimonio .autor{
+    font-size: 12px;
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
+}
+/*fin del home*/
+/*Inicio de nosotros*/
+.historia p{
+    font-size: 13px;
+
+}
+.personas{
+    display: flex;
+    /*gap: 20px;*/
+    justify-content: space-between;
+}
+.persona{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 15px 12px 5px;
+    box-sizing: border-box;/*me respeta el tamaño del 18%*/
+
+}
+.persona img{
+    border-radius: 50%;
+    width: 40%;
+    box-shadow: 0 0 2px black;
+}
+.persona h5,
+.persona h6{
+    margin: 0;
+    color: #2e64a1;
+    font-weight: normal;
+}
+/* es lo mismo que hacer por separado*/
+.persona h5{
+    font-size: 14px;
+}
+.persona h6{
+    font-style: italic;
+}
+.persona p{
+    font-size: 11px;
+    text-align: left;
+}
+/*fin de nosotros*/
+
+
+/*inicio de contactos*/
+.contacto{
+    display: flex;
+    gap: 24px;/*separa con espacio*/
+/*justify-content: space-between;puede ser este en lugar de gap*/
+}
+.contacto div{
+    width: 100%;
+
+}
+.datos p{
+    font-size: 14px;
+}
+.datos ul li{
+    font-size: 13px;
+    list-style: none;/*no hace nada*/
+}
+.formulario p{
+    display: flex;/*se acomodan los elementos uno lado del otro*/
+}
+
+.formulario p input,
+.formulario p textarea{
+    width: 70%;
+}
+.formulario p label{
+    width: 80px;
+    background-color: yellow;
+    /*display: block;*/
+}
+
+/*fin de contacto*/
