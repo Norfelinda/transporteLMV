@@ -44,6 +44,7 @@ nav ul li a{
     /* si no se usa estos dos:display: block;text-align: center;*/
     display: flex;/*el display va con justify*/
     justify-content: center;
+    transition: all 0.5s ease;
 }
 nav ul li a:hover{
     background-color: rgba(15, 8, 8, 0.3);/*rgba es para sacar opacidad*/
@@ -170,12 +171,59 @@ h2{
 
 .formulario p input,
 .formulario p textarea{
-    width: 70%;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 14px;
+    padding: 6px 10px;
 }
 .formulario p label{
-    width: 80px;
+    min-width: 80px;/*separa del*/
     background-color: yellow;
-    /*display: block;*/
+    display: flex;
+    align-items: center;
+
 }
+.formulario textarea{
+    height:  150px;
+    resize: none;/*desaparece las linias*/
+}
+/*.formulario p label.arriba{
+    align-items: start;
+
+}*/
+.formulario p:nth-child(4){/*con esto se modifica desde el css no hace falta poner la clase en html*/
+    /* nth-child(ever) : par
+        nth-child(odd) :impar
+        nth-child(5n) :representa los elementos 5,10,15 etc 
+
+        la desventa es si lo agrego algo en html el hijo cambia
+    */
+    align-items: start;
+}
+.persona:nth-child(odd){
+    background-color: lightcoral;
+}
+.formulario input[type="submit"]{
+    background-color: #6da9ed;
+    color: white;
+    box-shadow: 0 0 10px rgb(0,0,0 0.4);
+    font-size: 16px;
+    padding: 6px;
+    width: auto;
+    cursor: pointer;/*agrego la manito para hacer click*/
+/* margin-left: 80px;*//*primera solucion*/
+position: relative;/* segunda solucion con  position: relative y left 80px*/
+left: 80px;
+transition: all 0.8s ease;
+}
+.formulario input[type="submit"]:hover{
+    background-color: #2e64a1;
+}
+
+
+
+
 
 /*fin de contacto*/
