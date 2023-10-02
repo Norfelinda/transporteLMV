@@ -61,14 +61,14 @@ footer{
     margin-top: 20px;
 }
 .holder{
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 h2{
     color: #2e64a1;
     font-weight: 400;
 }
-.homeing img{
+.homeimg img{
     max-width: 100%;
 }
 .columnas{
@@ -203,6 +203,9 @@ h2{
     */
     align-items: start;
 }
+/*clase 10*/
+
+
 .persona:nth-child(odd){
     background-color: lightcoral;
 }
@@ -246,4 +249,43 @@ transition: all 0.8s ease;
     min-width: 220px;
     margin: 0 auto;
 }
+.personas{
+    flex-wrap: wrap;
 }
+.persona{
+width: 48%;
+margin-bottom: 10px;
+}
+.contacto{
+    flex-direction: column;
+}
+header .holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .logo img{
+    max-width: 80px;
+}
+header h1{
+    position: static;
+}
+nav ul.holder{
+flex-direction: column;    
+}
+}
+
+@media screen  and (max-width:320px){
+    header .holder{
+        flex-direction: column;
+    }
+    header .logo img{
+        max-width: 60px;
+    }
+        header h1{
+            margin: 10px;
+            font-size: 20px;
+        }
+
+}
+
